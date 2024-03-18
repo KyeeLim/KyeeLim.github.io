@@ -22,12 +22,12 @@ function countdownTimer() {
     // If the countdown is over, clear the timer
     if (distance < 0) {
       clearInterval(countdownTimer);
-      document.getElementById('countdown').innerHTML = 'EXPIRED';
+      document.getElementById('countdown').innerHTML = 'Livestream is ongoing now!';
     }
   }, 1000);
 
-  document.getElementById('bingoSheetContainer').style.display = 'none';
-  document.getElementById('countdownContainer').style.display = 'block';
+  //document.getElementById('bingoSheetContainer').style.display = 'none';
+  //document.getElementById('countdownContainer').style.display = 'block';
 }
 
 countdownTimer()
