@@ -22,3 +22,25 @@ img {
 .grayscale {
   filter: grayscale(100%);
 }
+
+#bingoSheetContainer {
+  display: block; /* Initially visible */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#countdownContainer {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#countdown {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
