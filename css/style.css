@@ -2,6 +2,23 @@ table {
   border-collapse: collapse;
 }
 
+.background-img {
+	/*Background img file*/
+	background-image: url('../img/background/BA_Background.gif');
+	  /* Add the blur effect */
+	filter: blur(8px);
+	/*Set as background*/
+	background-size: cover;
+	/* Position the background */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* Ensure the background is behind other content */
+	z-index: -1;
+}
+
 td {
   border: 1px solid black;
   width: 100px; 
