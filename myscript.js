@@ -6,3 +6,5 @@ function onClick(){
     });
   });
 }
+
+onClick();
