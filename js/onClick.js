@@ -6,7 +6,7 @@ function toggleGrayscale(img) {
 }
 
   // Add event listener to each image to toggle grayscale effect
-document.querySelectorAll('img').forEach(img => {
+document.querySelectorAll('img:not(#banner)').forEach(img => {
   const imageName = img.alt;
   const isGrayscale = localStorage.getItem(imageName) === 'true';
   if (isGrayscale) {
