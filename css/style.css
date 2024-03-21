@@ -89,3 +89,7 @@ td:not(.timer-table) {
 	bottom: 0;
 	margin-left:0;
 }
+
+td[colspan="4"] {
+  min-width: 430px; /* Adjust the minimum width as needed */
+}
