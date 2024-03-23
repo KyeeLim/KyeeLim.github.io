@@ -86,7 +86,7 @@ td:not(.timer-table) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.75, 0.75);
-  overflow: visible;
+  overflow: auto;
 }
 
 #countdownContainer {
@@ -116,15 +116,9 @@ td[colspan="4"] {
 }
 
 td[colspan="1"] {
-  min-width: 80px; /* Adjust the minimum width as needed */
+  max-width: 100px; /* Adjust the minimum width as needed */
 }
 
 .opacity{
   opacity: 1;
-}
-
-@media only screen and (max-width: 600px) {
-  .content {
-    width: 70%; /* Adjust content width for smaller screens */
-  }
 }
