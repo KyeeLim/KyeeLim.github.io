@@ -1,33 +1,45 @@
-function countdownTimer() {
-  // Set the target date and time (year, month (0-11), day, hour, minute, second)
-  const targetDate = new Date('2024-03-24T19:00:00').getTime();
+function calculateTimeRemaining(targetTime) {
+  var now = new Date().getTime();
+  var timeRemaining = targetTime - now;
 
-  // Update the countdown every second
-  const countdownTimer = setInterval(function() {
-    // Get the current date and time
-    const now = new Date().getTime();
-    
-    // Calculate the remaining time
-    const distance = targetDate - now;
-    
-    // Calculate days, hours, minutes, and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Display the countdown timer
-    document.getElementById('countdown').innerHTML = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-    
-    // If the countdown is over, clear the timer
-    if (distance < 0) {
-      clearInterval(countdownTimer);
-      document.getElementById('countdown').innerHTML = 'Livestream is ongoing now!';
-    }
-  }, 1000);
+  var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-  //document.getElementById('bingoSheetContainer').style.display = 'none';
-  //document.getElementById('countdownContainer').style.display = 'block';
+  return {
+    'total': timeRemaining,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
 }
 
-countdownTimer()
+// Function to start the countdown
+function startCountdown(targetTime, elementId) {
+  var countdownElement = document.getElementById(elementId);
+
+  function updateCountdown() {
+    var time = calculateTimeRemaining(targetTime);
+
+    countdownElement.innerHTML =  'Countdown: ' +
+                                  time.days + ' d ' +
+                                  time.hours + ' h ' +
+                                  time.minutes + ' m ' +
+                                  time.seconds + ' s ';
+
+    if (time.total <= 0) {
+      clearInterval(countdownInterval);
+      countdownElement.innerHTML = 'EXPIRED';
+    }
+  }
+
+  updateCountdown(); // Initial call to avoid delay
+
+  var countdownInterval = setInterval(updateCountdown, 1000);
+}
+
+// Adjust for user's timezone
+var targetTime = new Date('2024-03-24T10:00:00Z').getTime(); // Set your target time in UTC
+startCountdown(targetTime, 'countdown');
