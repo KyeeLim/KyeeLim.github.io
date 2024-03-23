@@ -26,7 +26,7 @@ function updateCountdown() {
   const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
   const formattedTime = `${days ? days + 'd ' : ''}${hours ? hours + 'h ' : ''}${minutes ? minutes + 'm ' : ''}${seconds}s`;
-  document.getElementById("countdown").textContent = formattedTime;
+  document.getElementById("countdown").textContent = 'Countdown : '+formattedTime;
 
   setTimeout(updateCountdown, 1000);
 }
