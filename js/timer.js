@@ -1,47 +1,34 @@
-function calculateTimeRemaining(targetTime) {
-  var now = new Date().getTime();
-  var timeRemaining = targetTime - now;
+// Set the end time in UTC
+const endDateUTC = new Date("2024-03-24T11:00:00Z"); // Equivalent to 20:00 JST
 
-  var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+function updateCountdown() {
+  const now = new Date();
 
-  return {
-    'total': timeRemaining,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
+  // Get the user's time zone offset in minutes
+  const userTimezoneOffset = now.getTimezoneOffset();
 
-// Function to start the countdown
-function startCountdown(targetTime, elementId) {
-  var countdownElement = document.getElementById(elementId);
+  // Adjust the end time based on the user's offset to make it local for them
+  const endDateLocal = endDateUTC;
 
-  function updateCountdown() {
-    var time = calculateTimeRemaining(targetTime);
+  const difference = endDateLocal.getTime() - now.getTime();
 
-    countdownElement.innerHTML =  'Countdown: ' +
-                                  time.days + ' d ' +
-                                  time.hours + ' h ' +
-                                  time.minutes + ' m ' +
-                                  time.seconds + ' s ';
+  //console.log("UTC : "+endDateUTC)
+  //console.log(endDateLocal)
 
-    if (time.total <= 0) {
-      clearInterval(countdownInterval);
-      countdownElement.innerHTML = 'EXPIRED';
-    }
+  if (difference <= 0) {
+    document.getElementById("countdown").textContent = "Live Now!/Ended!";
+    return;
   }
 
-  updateCountdown(); // Initial call to avoid delay
+  const seconds = Math.floor((difference / 1000) % 60);
+  const minutes = Math.floor((difference / (1000 * 60)) % 60);
+  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-  var countdownInterval = setInterval(updateCountdown, 1000);
+  const formattedTime = `${days ? days + 'd ' : ''}${hours ? hours + 'h ' : ''}${minutes ? minutes + 'm ' : ''}${seconds}s`;
+  document.getElementById("countdown").textContent = formattedTime;
+
+  setTimeout(updateCountdown, 1000);
 }
 
-// Adjust for user's timezone
-var targetTime = new Date('2024-03-24T10:00:00Z').getTime(); // Set your target time in UTC
-var offset = new Date().getTimezoneOffset(); // User's timezone offset in minutes
-targetTime += offset * 60 * 1000;
-startCountdown(targetTime, 'countdown');
+updateCountdown();
