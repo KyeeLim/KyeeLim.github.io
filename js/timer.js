@@ -42,4 +42,6 @@ function startCountdown(targetTime, elementId) {
 
 // Adjust for user's timezone
 var targetTime = new Date('2024-03-24T10:00:00Z').getTime(); // Set your target time in UTC
+var offset = new Date().getTimezoneOffset(); // User's timezone offset in minutes
+targetTime += offset * 60 * 1000;
 startCountdown(targetTime, 'countdown');
