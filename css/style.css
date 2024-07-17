@@ -86,7 +86,7 @@ td:not(.timer-table) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.75, 0.75);
-  overflow: auto;
+  overflow: hidden;
 }
 
 #countdownContainer {
