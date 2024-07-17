@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Array of background image URLs
   var backgroundImages = [
     'url("../img/background/BA_Background.mp4")',
-    'url("../img/background/rickroll.mp4")'
+    'url("../img/background/rickroll.mp4")',
     // Add more URLs as needed
   ];
 
