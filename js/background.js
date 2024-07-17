@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (randomNumber <= 6) {
       // 6% chance to set the second background image
       document.querySelector('.background-video').style.backgroundImage = backgroundImages[1];
-      console.log('rickroll2',randomNumber);
+      console.log('test',randomNumber);
     } else {
       // 94% chance to set the first background image
       document.querySelector('.background-video').style.backgroundImage = backgroundImages[0];
-      console.log('rickroll1',randomNumber);
+      console.log('rickroll',randomNumber);
     }
   }
 
