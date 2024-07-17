@@ -1,5 +1,5 @@
 // Set the end time in UTC
-const endDateUTC = new Date("2024-03-24T11:00:00Z"); // Equivalent to 20:00 JST
+const endDateUTC = new Date("2024-07-21T10:00:00Z"); // Equivalent to 19:00 JST
 
 function updateCountdown() {
   const now = new Date();
