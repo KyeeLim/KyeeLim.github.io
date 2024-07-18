@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Array of background image URLs
-  var videos = [
-    '../img/background/BA_Background.mp4',
+  var goodies = [
     '../img/goodies/rickroll.mp4',
+	'../img/goodies/koshitan.mp4',
+	'../img/goodies/toothless.mp4',
+	'../img/goodies/hifumidaisuki.mp4',
+	'../img/goodies/feet.mp4',
+	'../img/goodies/mutsukicalifornia.mp4'
   ];
 
   // Function to set random background image
@@ -13,10 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Check if randomNumber is less than or equal to 5 (which is 6% of 100)
     if (randomNumber <= 6) {
       // 6% chance to set the second background image
-      videoElement.innerHTML = `<source src="${videos[1]}" type="video/mp4">`;
+	  var randomVid = Math.floor(Math.random()* goodies.length);
+      videoElement.innerHTML = `<source src="${goodies[randomVid]}" type="video/mp4">`;
+	  
     } else {
       // 94% chance to set the first background image
-      videoElement.innerHTML = `<source src="${videos[0]}" type="video/mp4">`;
+      videoElement.innerHTML = `<source src=\'../img/background/BA_Background.mp4\' type="video/mp4">`;
     }
 
     videoElement.load();
