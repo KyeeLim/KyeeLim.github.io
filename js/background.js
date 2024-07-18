@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Array of background image URLs
   var videos = [
     '../img/background/BA_Background.mp4',
-    '../img/background/rickroll.mp4',
+    '../img/goodies/rickroll.mp4',
   ];
 
   // Function to set random background image
