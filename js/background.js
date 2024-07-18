@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Array of background image URLs
   var videos = [
-    'url("../img/background/BA_Background.mp4")',
-    'url("../img/background/rickroll.mp4")',
-    // Add more URLs as needed
+    '../img/background/BA_Background.mp4',
+    '../img/background/rickroll.mp4',
   ];
 
   // Function to set random background image
@@ -15,12 +14,18 @@ document.addEventListener("DOMContentLoaded", function() {
     if (randomNumber <= 6) {
       // 6% chance to set the second background image
       videoElement.innerHTML = `<source src="${videos[1]}" type="video/mp4">`;
-      console.log('rick',randomNumber);
     } else {
       // 94% chance to set the first background image
       videoElement.innerHTML = `<source src="${videos[0]}" type="video/mp4">`;
-      console.log('roll',randomNumber);
     }
+
+    videoElement.load();
+    videoElement.play().catch(error => {
+      console.error('Error attempting to play video:', error);
+      // Handle autoplay policy restrictions
+      videoElement.muted = true;
+      videoElement.play();
+    });
   }
 
   // Initially set a random background image on page load
