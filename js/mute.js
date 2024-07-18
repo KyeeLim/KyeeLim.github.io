@@ -1,4 +1,4 @@
-const vid = document.getElementByID("backgroundVideo");
+const vid = document.getElementById('backgroundVideo');
 
 function mute(){
 	vid.muted = true;
