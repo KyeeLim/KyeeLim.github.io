@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const videoElement = document.getElementById('backgroundVideo');
     
     // Check if randomNumber is less than or equal to 5 (which is 6% of 100)
-    if (randomNumber <= 99) {
+    if (randomNumber <= 6) {
       // 6% chance to set the second background image
       videoElement.innerHTML = `<source src="${videos[1]}" type="video/mp4">`;
       console.log('rick',randomNumber);
