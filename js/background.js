@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     videoElement.play().catch(error => {
       console.error('Error attempting to play video:', error);
       // Handle autoplay policy restrictions
+      videoElement.muted = false;
       videoElement.play();
     });
   }
