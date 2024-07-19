@@ -185,6 +185,17 @@ td[colspan="1"] {
   transform: translate(-50%, -50%) scale(0.55, 0.55);
   overflow: hidden;
 }
+#spoiler {
+	color:red;
+	font-size:30px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
+#warning {
+	color:gray;
+	font-size:25px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
 }
 
 @media all and (min-width:801px) and (max-width: 959px) {
@@ -197,6 +208,18 @@ td[colspan="1"] {
   transform: translate(-50%, -50%) scale(0.55, 0.55);
   overflow: hidden;
 }
+#spoiler {
+	color:red;
+	font-size:30px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
+#warning {
+	color:gray;
+	font-size:25px;
+	marg
+}
+
 }
 
 @media all and (min-width:769px) and (max-width: 800px) {
@@ -208,6 +231,17 @@ td[colspan="1"] {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.55, 0.55);
   overflow: hidden;
+}
+#spoiler {
+	color:red;
+	font-size:30px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
+#warning {
+	color:gray;
+	font-size:25px;
+	marg
 }
 }
 
@@ -221,6 +255,17 @@ td[colspan="1"] {
   transform: translate(-50%, -50%) scale(0.55, 0.55);
   overflow: hidden;
 }
+#spoiler {
+	color:red;
+	font-size:30px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
+#warning {
+	color:gray;
+	font-size:25px;
+	marg
+}
 }
 
 @media all and (min-width:481px) and (max-width: 568px) {
@@ -232,6 +277,17 @@ td[colspan="1"] {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.55, 0.55);
   overflow: hidden;
+}
+#spoiler {
+	color:red;
+	font-size:30px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
+#warning {
+	color:gray;
+	font-size:25px;
+	marg
 }
 }
 
@@ -245,6 +301,17 @@ td[colspan="1"] {
   transform: translate(-50%, -50%) scale(0.55, 0.55);
   overflow: hidden;
 }
+#spoiler {
+	color:red;
+	font-size:30px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
+#warning {
+	color:gray;
+	font-size:25px;
+	marg
+}
 }
 
 @media all and (min-width:0px) and (max-width: 320px) {
@@ -256,5 +323,16 @@ td[colspan="1"] {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.55, 0.55);
   overflow: hidden;
+}
+#spoiler {
+	color:red;
+	font-size:30px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
+#warning {
+	color:gray;
+	font-size:25px;
+	marg
 }
 }
