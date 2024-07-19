@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
       videoElement.muted = true;
       videoElement.play();
     });
+	videoElement.pause();
   }
 
   // Initially set a random background image on page load
