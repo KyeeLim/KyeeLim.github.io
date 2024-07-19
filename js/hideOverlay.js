@@ -3,6 +3,5 @@
     var overlay = document.getElementById('overlay');
 	var vid = document.getElementById('backgroundVideo');
     overlay.style.display = 'none';
-	vid.play();
 	vid.muted = false;
   }

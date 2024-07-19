@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     videoElement.load();
-    //videoElement.play().catch(error => {
-    //  console.error('Error attempting to play video:', error);
-    //  // Handle autoplay policy restrictions
-    //  videoElement.muted = true;
-    //  videoElement.play();
-    //});
-	videoElement.pause();
+    videoElement.play().catch(error => {
+      console.error('Error attempting to play video:', error);
+      // Handle autoplay policy restrictions
+      videoElement.muted = true;
+      videoElement.play();
+    });
+	videoElement.volume = 0.5;
   }
 
   // Initially set a random background image on page load
