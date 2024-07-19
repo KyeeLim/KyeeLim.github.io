@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	  
     } else {
       // 94% chance to set the first background image
-      videoElement.innerHTML = `<source src=\'../img/background/BA_Background.mp4\' type="video/mp4">`;
+      videoElement.innerHTML = `<source src=\'../img/background/BA_Background_optimized.mp4\' type="video/mp4">`;
     }
 
     videoElement.load();
