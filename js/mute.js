@@ -1,5 +1,5 @@
 function mute(){
-	const vid = document.getElementById('backgroundVideo');
+	var vid = document.getElementById('backgroundVideo');
   // allow video bg to be unmute and mute
   if(vid.muted != true){
     vid.muted = true;

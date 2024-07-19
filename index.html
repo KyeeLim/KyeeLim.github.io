@@ -11,8 +11,15 @@
 	
 
 <!--<meta http-equiv="refresh" content="3;url=https://youtu.be/dQw4w9WgXcQ" />--><!-- Rickroll Code, remove afterwards-->
+<div id="overlay" onclick = "hideOverlay()">
+	<div id="spoilerwarning">
+	<div id="spoiler">Spoiler Warning.</div>
+	<div id="spoiler">This Bingo Board contains spoiler for Volume 1 Chapter 3, it is adviced to complete the latest story before viewing the Bingo Board.</div>
+	<div id="warning">If you have completed, or just don't care about it, click anywhere on the page to make it hidden.</div>
+	</div>
+</div>	
 <div class="background-video">
-  <video autoplay loop id="backgroundVideo">
+  <video autoplay loop muted pause id="backgroundVideo">
     <!-- The source will be set by JavaScript -->
 </video>
 </div>
@@ -184,5 +191,6 @@
 <script src="js/timer.js"></script>
 <script src="js/background.js"></script>
 <script src="js/mute.js"></script>
+<script src="js/hideOverlay.js"></script>
 </body>
 </html>

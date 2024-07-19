@@ -1,3 +1,34 @@
+#overlay {
+	position: fixed; /* Fixed position to cover the entire viewport */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 1); /* Semi-transparent background */
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+    z-index: 10;
+}
+
+#spoilerwarning{
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center; /* Center text inside #spoilerwarning */
+}
+
+#spoiler {
+	color:red;
+	font-size:50px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
+#warning {
+	color:gray;
+	font-size:45px;
+	margin-bottom: 10px; /* Space between spoiler and warning */
+}
+
 table {
   border-collapse: collapse;
 }
