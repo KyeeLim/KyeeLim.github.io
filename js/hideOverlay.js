@@ -4,5 +4,5 @@
 	var vid = document.getElementById('backgroundVideo');
     overlay.style.display = 'none';
 	vid.pause = false;
-	vid.muted = false;
+	vid.autoplay = true;
   }
