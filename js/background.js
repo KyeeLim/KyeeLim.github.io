@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const videoElement = document.getElementById('backgroundVideo');
     
     // Check if randomNumber is less than or equal to 5 (which is 6% of 100)
-    if (randomNumber <= -1) {
+    if (randomNumber <= 5) {
       // 6% chance to set the second background image
 	  var randomVid = Math.floor(Math.random()* goodies.length);
       videoElement.innerHTML = `<source src="${goodies[randomVid]}" type="video/mp4">`;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
       videoElement.muted = true;
       videoElement.play();
     });
-	videoElement.volume = 0.3;
+	videoElement.volume = 0.2;
   }
 
   // Initially set a random background image on page load
