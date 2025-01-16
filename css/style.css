@@ -37,6 +37,7 @@ table {
 	/*Background img file*/
 	/* background-image: url('../img/background/BA_Background.gif'); */
 	  /* Add the blur effect */
+	  background-image: url('../img/background/Seia background.jpg');
 	filter: blur(8px);
 	/*Set as background*/
 	background-size: cover;
